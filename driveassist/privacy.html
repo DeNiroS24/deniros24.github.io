@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveAssist - Privacy Policy</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 850px; margin: 0 auto; padding: 30px 20px; color: #1c1c1e; line-height: 1.7; background-color: #f8f9fa; }
+        .container { background: #ffffff; padding: 40px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        h1 { font-size: 28px; color: #111; margin-bottom: 8px; font-weight: 800; }
+        h2 { font-size: 20px; color: #0056b3; margin-top: 28px; margin-bottom: 12px; font-weight: 700; border-bottom: 1px solid #eaeaea; padding-bottom: 6px; }
+        p, li { font-size: 15px; color: #333; }
+        ul { padding-left: 20px; }
+        .last-updated { color: #666; font-size: 14px; margin-bottom: 24px; font-style: italic; }
+        .highlight { background-color: #eef6ff; border-left: 4px solid #0056b3; padding: 12px 16px; margin: 16px 0; border-radius: 0 8px 8px 0; }
+        footer { margin-top: 40px; font-size: 13px; color: #777; text-align: center; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Privacy Policy for DriveAssist</h1>
+    <div class="last-updated">Effective Date: August 2026</div>
+
+    <p>DriveAssist ("we", "us", or "our"), operated by Salina Systems, respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, store, and protect your information when you use the DriveAssist mobile application ("App").</p>
+
+    <div class="highlight">
+        <strong>Privacy-First Architecture:</strong> DriveAssist uses hardware-backed Zero-Knowledge AES-256 encryption. Your private contacts, custom voice aliases, and parking locations are encrypted on your device before any optional cloud backup.
+    </div>
+
+    <h2>1. Information We Collect & Device Permissions</h2>
+    <p>To provide hands-free driving utilities, DriveAssist requests specific device permissions. Data collected through these permissions remains on your device or is stored in encrypted form:</p>
+    <ul>
+        <li><strong>Location Data (GPS & Background Bluetooth)</strong>: Used to render in-app maps, navigate to saved locations, and automatically save your vehicle's parking spot when Bluetooth disconnects. Location data is never sold or shared.</li>
+        <li><strong>Microphone & Audio</strong>: Used for hands-free voice control, custom voice alias matching, and wake-word activation. Audio processing is executed locally on-device whenever possible.</li>
+        <li><strong>Contacts & Phone State</strong>: Used to display your VIP contacts, execute voice-activated phone calls, and dispatch quick hands-free SMS messages at your command.</li>
+        <li><strong>System & Device State</strong>: Used for Bluetooth connection sensing, vibration feedback, and notification alerts.</li>
+    </ul>
+
+    <h2>2. How We Encrypt & Store Your Data</h2>
+    <p>DriveAssist implements local hardware-backed AES-256 encryption (via SQLCipher and Android KeyStore) for your local DataStore preferences and vault storage. If you enable Cloud Sync, your metadata is encrypted on-device before transmission to our cloud backup service (Firebase Firestore).</p>
+
+    <h2>3. Third-Party Service Providers</h2>
+    <p>DriveAssist integrates with trusted third-party SDKs strictly to deliver core app services, payment processing, and stability monitoring:</p>
+    <ul>
+        <li><strong>RevenueCat & Google Play In-App Billing</strong>: Processes subscription orders, free trials, and entitlement verification. Payment credentials (credit card numbers) are handled exclusively by Google Play Store.</li>
+        <li><strong>Google Play Services & Google Maps API</strong>: Used to render map tiles, provide geolocation coordinates, and verify app integrity (Play Integrity App Check).</li>
+        <li><strong>Firebase (Google LLC)</strong>: Used for encrypted cloud backup (Firestore), user authentication, crash reporting (Crashlytics), and app performance monitoring.</li>
+    </ul>
+
+    <h2>4. Data Sharing & Selling Disclosure</h2>
+    <p><strong>We do NOT sell, rent, lease, or monetize your personal data, contacts, voice recordings, or location history.</strong> Your information is accessed solely to execute the driving companion features you request.</p>
+
+    <h2>5. Data Retention & Account Deletion</h2>
+    <p>You maintain total control over your data. You can purge your cloud backups or permanently delete your account at any time directly inside the App under <code>System Info ➔ Danger Zone ➔ Purge Cloud Data / Delete Account</code>.</p>
+
+    <h2>6. Children's Privacy</h2>
+    <p>DriveAssist is an automotive cockpit companion intended for licensed vehicle drivers and does not knowingly collect personal information from children under 13 years of age.</p>
+
+    <h2>7. Contact Us</h2>
+    <p>If you have any questions or concerns regarding this Privacy Policy or your data, please contact us at:</p>
+    <p><strong>Email:</strong> support@salina-systems.com<br>
+    <strong>Developer:</strong> Salina Systems / DeNiroS24</p>
+
+    <footer>&copy; 2026 DriveAssist by Salina Systems. All rights reserved.</footer>
+</div>
+</body>
+</html>
