@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salina Labs | Independent Software Engineering</title>
+    <meta name="description" content="Salina Labs engineers performance-focused software, mobile systems, desktop applications, and interactive entertainment.">
+    <style>
+        :root {
+            --bg-color: #070913;
+            --card-bg: #0f172a;
+            --border-color: #1e293b;
+            --accent-blue: #3b82f6;
+            --accent-cyan: #06b6d4;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 32px;
+            max-width: 1100px;
+            margin: 0 auto;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .logo {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-blue);
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+        .hero {
+            max-width: 900px;
+            margin: 80px auto 60px;
+            text-align: center;
+            padding: 0 24px;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.12);
+            color: var(--accent-blue);
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 9999px;
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: 800;
+            letter-spacing: -1.5px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+        .lead {
+            font-size: 19px;
+            color: var(--text-muted);
+            max-width: 680px;
+            margin: 0 auto 36px;
+        }
+        .cta-btn {
+            display: inline-block;
+            background: var(--accent-blue);
+            color: #ffffff;
+            font-weight: 600;
+            padding: 14px 28px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 15px;
+            transition: transform 0.15s ease, background 0.2s ease;
+        }
+        .cta-btn:hover {
+            background: #2563eb;
+            transform: translateY(-1px);
+        }
+        .section {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 24px;
+        }
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            letter-spacing: -0.5px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card-tag {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--accent-cyan);
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+        .card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+        .card p {
+            color: var(--text-muted);
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .feature-list {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+        .feature-list li {
+            font-size: 14px;
+            color: #cbd5e1;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .feature-list li::before {
+            content: "✓";
+            color: var(--accent-blue);
+            font-weight: bold;
+        }
+        .card-link {
+            color: var(--accent-blue);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            align-self: flex-start;
+        }
+        .card-link:hover {
+            text-decoration: underline;
+        }
+        footer {
+            border-top: 1px solid var(--border-color);
+            margin-top: 100px;
+            padding: 40px 24px;
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+        .footer-links {
+            margin-bottom: 16px;
+        }
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 12px;
+            transition: color 0.2s ease;
+        }
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="logo">
+        <span class="logo-dot"></span>
+        Salina Labs
+    </div>
+    <div class="nav-links">
+        <a href="#products">Products</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="mailto:support@salinalabs.dev">Support</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <div class="badge">Independent Engineering Studio</div>
+    <h1>Purpose-built software engineered for privacy and performance.</h1>
+    <p class="lead">We design refined mobile platforms, native desktop utilities, and interactive software with zero-knowledge security at the core.</p>
+    <a href="#products" class="cta-btn">View Our Products</a>
+</div>
+
+<div class="section" id="products">
+    <div class="section-title">Software Lineup</div>
+    <div class="grid">
+        <div class="card">
+            <div>
+                <div class="card-tag">Android Platform</div>
+                <h3>DriveAssist</h3>
+                <p>An intelligent, hands-free automotive cockpit utility. Streamlines calling, mapping shortcuts, and vehicle monitoring while keeping driver focus on the road.</p>
+                <ul class="feature-list">
+                    <li>Zero-knowledge AES-256 encrypted vault</li>
+                    <li>Hands-free speech commands and shortcuts</li>
+                    <li>Automated parking spot logging</li>
+                    <li>Offline-first, modular cockpit architecture</li>
+                </ul>
+            </div>
+            <a href="privacy.html" class="card-link">View Legal &amp; Privacy Policies &rarr;</a>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="card-tag">In Development</div>
+                <h3>Native Desktop Utilities</h3>
+                <p>High-efficiency desktop utilities designed for creators and developers, built with responsive native interfaces and local-first data persistence.</p>
+                <ul class="feature-list">
+                    <li>Multi-platform support</li>
+                    <li>Low resource footprints</li>
+                    <li>Local-first architecture</li>
+                </ul>
+            </div>
+            <span style="font-size: 13px; color: var(--text-muted); font-style: italic;">Coming soon</span>
+        </div>
+
+        <div class="card">
+            <div>
+                <div class="card-tag">Experimental Lab</div>
+                <h3>Interactive Entertainment</h3>
+                <p>Exploration of responsive interactive systems, indie gaming experiences, and lightweight simulations built with focused design craft.</p>
+                <ul class="feature-list">
+                    <li>Original game mechanics</li>
+                    <li>Custom simulation engines</li>
+                </ul>
+            </div>
+            <span style="font-size: 13px; color: var(--text-muted); font-style: italic;">Under research</span>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="mailto:support@salinalabs.dev">Contact Support</a>
+    </div>
+    <p>&copy; 2026 Salina Labs. All rights reserved. Tunapuna-Piarco, Trinidad &amp; Tobago.</p>
+</footer>
+
+</body>
+</html>
