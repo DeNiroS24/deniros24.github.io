@@ -3,133 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DriveAssist - Privacy Policy</title>
+    <title>DriveAssist - Privacy Policy | Salina Labs</title>
     <style>
         :root {
-            --primary: #0056b3;
-            --primary-light: #eef6ff;
-            --text-dark: #1c1c1e;
-            --text-muted: #555558;
-            --border: #e5e5ea;
-            --bg-page: #f8f9fa;
-            --bg-card: #ffffff;
+            --bg-color: #0b0f19;
+            --card-bg: #131b2e;
+            --accent-blue: #3b82f6;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border-color: #1e293b;
+            --danger-bg: rgba(239, 68, 68, 0.1);
+            --danger-border: #ef4444;
         }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 880px; margin: 0 auto; padding: 40px 20px; color: var(--text-dark); line-height: 1.7; background-color: var(--bg-page); }
-        .container { background: var(--bg-card); padding: 44px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid var(--border); }
-        h1 { font-size: 30px; color: #111; margin-bottom: 6px; font-weight: 800; }
-        .meta-header { font-size: 14px; color: var(--text-muted); margin-bottom: 24px; font-style: italic; }
-        h2 { font-size: 20px; color: var(--primary); margin-top: 32px; margin-bottom: 12px; font-weight: 700; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
-        h3 { font-size: 16px; color: #222; margin-top: 18px; margin-bottom: 6px; font-weight: 600; }
-        p, li { font-size: 15px; color: #2c2c2e; }
-        ul { padding-left: 22px; margin-bottom: 16px; }
-        li { margin-bottom: 8px; }
-        .highlight { background-color: var(--primary-light); border-left: 4px solid var(--primary); padding: 16px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; font-size: 14.5px; }
-        table { width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 14px; }
-        th, td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; }
-        th { background-color: #f1f3f5; color: #111; font-weight: 600; }
-        code { background-color: #f1f3f5; padding: 2px 6px; border-radius: 4px; font-size: 13.5px; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; }
-        a { color: var(--primary); text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        footer { margin-top: 40px; font-size: 13px; color: var(--text-muted); text-align: center; border-top: 1px solid var(--border); padding-top: 20px; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 48px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+        .header {
+            margin-bottom: 32px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 24px;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+        .subhead {
+            color: var(--accent-blue);
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+        .last-updated {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+        .callout {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 4px solid var(--accent-blue);
+            padding: 16px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 24px 0;
+            font-size: 15px;
+        }
+        h2 {
+            font-size: 20px;
+            color: #ffffff;
+            margin-top: 36px;
+            margin-bottom: 14px;
+            font-weight: 700;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+        p {
+            font-size: 15px;
+            color: #cbd5e1;
+            margin-bottom: 14px;
+        }
+        ul {
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+        li {
+            font-size: 15px;
+            color: #cbd5e1;
+            margin-bottom: 8px;
+        }
+        li strong {
+            color: #ffffff;
+        }
+        .danger-box {
+            background: var(--danger-bg);
+            border-left: 4px solid var(--danger-border);
+            padding: 16px 20px;
+            border-radius: 0 12px 12px 0;
+            margin: 24px 0;
+            font-size: 15px;
+            color: #fca5a5;
+        }
+        .footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-color);
+            font-size: 14px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+        .footer a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 <div class="container">
-    <h1>Privacy Policy for DriveAssist</h1>
-    <div class="meta-header">Effective Date: October 4, 2026 | Last Updated: October 2026</div>
-
-    <p>DriveAssist ("we", "us", or "our"), operated by <strong>Salina Labs</strong>, provides an automotive companion application designed for hands-free utility and cockpit organization. This Privacy Policy explains what data we access, how that data is stored and encrypted, and how we protect your privacy when you use the <strong>DriveAssist</strong> mobile application ("App").</p>
-
-    <div class="highlight">
-        <strong>Security Architecture:</strong> DriveAssist uses on-device hardware-backed AES-256 encryption. Your private contacts, custom voice aliases, parking coordinates, and synced configuration toggles are encrypted directly on your device before any optional cloud backup transmission.
+    <div class="header">
+        <div class="subhead">Salina Labs</div>
+        <h1>Privacy Policy for DriveAssist</h1>
+        <div class="last-updated">Effective Date: October 2026</div>
     </div>
 
-    <h2>1. Device Permissions and Data Accessed</h2>
-    <p>DriveAssist requires specific Android runtime permissions to deliver hands-free driving features:</p>
+    <p>DriveAssist is operated by Salina Labs. We build automotive software with a strict privacy by design architecture. This Privacy Policy informs you of our policies regarding the collection, use, encryption, and deletion of personal data when you use the DriveAssist mobile application.</p>
+
+    <div class="callout">
+        <strong>Zero-Knowledge Security:</strong> DriveAssist is built on a zero-knowledge security model. Your private contacts, custom voice aliases, and saved locations are encrypted on your physical device using hardware-backed AES-256 before any optional cloud synchronization. Salina Labs does not possess the keys to decrypt or read your vault data.
+    </div>
+
+    <h2>1. Device Permissions and Data Processing</h2>
+    <p>DriveAssist requests specific Android system permissions strictly to deliver hands-free cockpit functionality. Here is how your data is handled:</p>
     <ul>
-        <li><strong>Location Data (Precise and Coarse GPS)</strong>: Used to render in-app map tiles, display routing, and automatically record your vehicle's parked location when Bluetooth disconnects. Location data is stored locally and is never sold or shared with data brokers.</li>
-        <li><strong>Microphone and Audio Processing</strong>: Used for hands-free voice commands, custom voice shortcuts, and local wake-word activation. Audio is processed locally on the device. Audio recordings are temporary and are never stored or sent to remote servers.</li>
-        <li><strong>Contacts (Read and Write Access)</strong>: Used to display favorite contacts on the cockpit screen, execute voice-directed calls, dispatch quick SMS notifications, and allow you to view, create, edit, save, and delete contacts directly within the App or an encrypted local vault.</li>
-        <li><strong>Phone State and Quick SMS</strong>: Used solely to initiate user-confirmed phone calls and pre-formatted single-tap ETA text messages to recipients you choose. The App does not read your personal incoming text messages.</li>
-        <li><strong>Bluetooth and System State</strong>: Used to detect vehicle audio connection and disconnection events, route voice audio, trigger haptic confirmation pulses, and display driving notifications.</li>
+        <li><strong>Location (GPS and Foreground Service):</strong> Used to calculate vehicle speed, display dashboard maps, execute navigation shortcuts, and automatically log your parking coordinates upon Bluetooth disconnection. Location histories remain stored locally in your on-device database and are never sold, rented, or tracked by third parties.</li>
+        <li><strong>Microphone and Audio:</strong> Used solely to process hands-free voice commands and wake-word detection while in driving mode. Audio signals are interpreted in real time using Android native on-device speech recognition. Raw voice recordings are never uploaded to remote servers or retained on disk.</li>
+        <li><strong>Device Address Book Contacts:</strong> DriveAssist accesses your local Android contacts strictly to display calling shortcuts and initiate phone calls at your request. Device contact names, telephone numbers, and email addresses are never transmitted to our servers or synced to the cloud. Only irreversible cryptographic one-way hashes are used locally for identity indexing.</li>
+        <li><strong>Secure Vault Contacts:</strong> DriveAssist provides an optional Secure Vault for private contacts. Vault contacts are stored in isolated application storage and are not accessible by external third-party apps or the Android system address book. When cloud synchronization is enabled, all Secure Vault details are encrypted with your personal master key on your device before transmission.</li>
+        <li><strong>Bluetooth and Vehicle Connectivity:</strong> Used to detect when your smartphone pairs with or disconnects from your vehicle hands-free system, enabling automatic driving mode transitions and automated parking spot recording.</li>
     </ul>
 
-    <h2>2. Cloud Sync and Encrypted Backups</h2>
-    <p>DriveAssist provides an optional multi-device Cloud Sync feature using Google Firebase Firestore:</p>
+    <h2>2. Speech Recognition and Inactive AI Features</h2>
+    <p>We believe in absolute transparency regarding artificial intelligence and voice processing:</p>
     <ul>
-        <li><strong>Synced Content</strong>: When Cloud Sync is enabled, the App synchronizes user configuration toggles (DataStore preferences, theme selections, audio settings), cockpit layout configurations (Bento tile arrangements), custom voice aliases, saved locations, and address book entries.</li>
-        <li><strong>Client-Side Encryption</strong>: All synced records are encrypted on your device using AES-GCM encryption with your user-derived secret key before transmission to Firebase Firestore. We cannot decrypt or view your stored contacts, private aliases, or custom preferences on our servers.</li>
+        <li><strong>Active Voice Processing:</strong> Hands-free commands currently run through local Android speech recognition engines. DriveAssist does not stream audio feeds or transcripts to cloud-based artificial intelligence providers.</li>
+        <li><strong>Inactive AI Modules:</strong> Any code structures for future machine learning or intelligent driver co-pilot features remain dormant and disabled in this release. DriveAssist does not transmit driver telemetry, conversation logs, or personal preferences to external generative artificial intelligence platforms. If advanced machine learning features are activated in future releases, they will operate with explicit user consent and uphold our zero-knowledge framework.</li>
     </ul>
 
-    <h2>3. Application Analytics and Diagnostics</h2>
-    <p>To monitor cockpit stability, evaluate feature usage, and fix bugs, DriveAssist includes:</p>
+    <h2>3. Cloud Synchronization and Storage</h2>
+    <p>Cloud synchronization is optional. If you create an account to back up your setup across multiple personal devices:</p>
     <ul>
-        <li><strong>Google Analytics for Firebase</strong>: Collects anonymous interaction metrics, including screen visits, orientation (portrait vs. landscape), active theme, dynamic color toggles, search method (numeric dialpad vs. text search), map expansion toggles, and external navigation provider selection. These events are linked to randomized Firebase Installation IDs and are never tied to personal contact details or GPS coordinates.</li>
-        <li><strong>Firebase Crashlytics and Performance Monitoring</strong>: Collects non-identifiable stack traces, operating system versions, and performance latency logs to help us identify and resolve crashes.</li>
+        <li>Your vault data, voice aliases, and settings are encrypted locally using AES-256 prior to cloud upload.</li>
+        <li>Encrypted data packets are securely transferred via HTTPS to Google Firebase Firestore infrastructure.</li>
+        <li>Because encryption keys are generated on your hardware from your master password, Salina Labs cannot read, analyze, or monetize your synchronized backups.</li>
     </ul>
 
-    <h2>4. Machine Learning and Voice Processing</h2>
-    <p>Voice command interpretation and keyword matching in DriveAssist run locally on your device hardware (LiteRT / MediaPipe). Personal user data, voice commands, and contact records are never used, sold, or shared to train machine learning models.</p>
-
-    <h2>5. Third-Party Service Providers</h2>
-    <p>DriveAssist uses trusted third-party SDKs to support core application functions:</p>
-    <table>
-        <thead>
-            <tr>
-                <th>Provider</th>
-                <th>Function</th>
-                <th>Data Processed</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Google Analytics for Firebase</strong></td>
-                <td>App performance and interaction analytics</td>
-                <td>Anonymous app events, screen views, installation IDs</td>
-            </tr>
-            <tr>
-                <td><strong>Firebase Crashlytics and Firestore</strong></td>
-                <td>Crash reporting and encrypted cloud backup</td>
-                <td>Crash stack traces, client-side encrypted backup data</td>
-            </tr>
-            <tr>
-                <td><strong>Google Play Services and Maps</strong></td>
-                <td>Map rendering and application integrity</td>
-                <td>Map viewport tiles, Play Integrity security verification</td>
-            </tr>
-            <tr>
-                <td><strong>RevenueCat and Google Play Billing</strong></td>
-                <td>In-app subscriptions and purchases</td>
-                <td>App User ID, subscription receipts (No payment cards accessed)</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h2>6. External Application Handoffs</h2>
-    <p>When you trigger navigation to an external maps app (such as Google Maps or Waze) or launch external media players, destination coordinates or media playback intents are passed to that application through standard Android Intents. Once handed off, that third-party application's own privacy policy applies.</p>
-
-    <h2>7. Data Sharing and Selling Prohibition</h2>
-    <p>We do not sell, rent, monetize, or trade your personal information, contact records, voice input, or location history. Your data is accessed solely to provide the driving companion features you request.</p>
-
-    <h2>8. Data Retention and Account Deletion</h2>
-    <p>You have full control over your stored data:</p>
+    <h2>4. Account Deletion and Data Rights</h2>
+    <p>You maintain absolute ownership and control over your personal data:</p>
     <ul>
-        <li><strong>In-App Deletion:</strong> You can purge cloud backups, delete synced database records, or permanently delete your account at any time within the App by navigating to: <code>System Info / Danger Zone / Purge Cloud Data / Delete Account</code>.</li>
-        <li><strong>Off-App Deletion Request:</strong> If you have uninstalled the App or cannot access your account, you can request permanent deletion of your account and cloud data by emailing <a href="mailto:support@salinalabs.dev">support@salinalabs.dev</a> with the subject line "Account Deletion Request". We will process your deletion request within thirty days.</li>
+        <li><strong>In-App Cloud Purge:</strong> You can purge all remote cloud backups at any time by navigating to Settings &gt; Data Control &gt; Purge Cloud Backups.</li>
+        <li><strong>In-App Account Deletion:</strong> You can permanently delete your account and all associated cloud data directly inside the application. Navigate to Settings &gt; Danger Zone &gt; Permanently Delete Account. This immediately purges your cloud database records and deletes your authentication credentials.</li>
+        <li><strong>Web-Based Deletion Request:</strong> If you no longer have access to the app, you can request full account and data deletion by sending an email from your registered account to <strong>support@salinalabs.dev</strong> with the subject line "Account Deletion Request". All user identifiers and associated records will be permanently purged within 30 days.</li>
     </ul>
 
-    <h2>9. Children's Privacy</h2>
-    <p>DriveAssist is intended exclusively for licensed motor vehicle drivers and does not knowingly collect personal information from children under 13 years of age.</p>
+    <div class="danger-box">
+        <strong>Data Destruction Notice:</strong> Deleting your account is permanent. Because encryption keys are managed on-device, deleted cloud backups cannot be recovered by Salina Labs.
+    </div>
 
-    <h2>10. Contact Us</h2>
-    <p>If you have any questions or inquiries regarding this Privacy Policy or your data, please contact us at:</p>
-    <p>
-        <strong>Email:</strong> <a href="mailto:support@salinalabs.dev">support@salinalabs.dev</a><br>
-        <strong>Developer:</strong> Salina Labs / DeNiroS24<br>
-        <strong>Website:</strong> <a href="https://salinalabs.dev" target="_blank" rel="noopener">https://salinalabs.dev</a>
-    </p>
+    <h2>5. Third-Party Infrastructure Services</h2>
+    <p>DriveAssist uses trusted infrastructure providers strictly for core application utilities:</p>
+    <ul>
+        <li><strong>Google Firebase:</strong> Provides secure authentication and encrypted cloud database storage.</li>
+        <li><strong>Google Play Services:</strong> Powers mapping tiles and location services.</li>
+        <li><strong>RevenueCat:</strong> Manages subscription entitlements and receipt validation for optional Pro subscriptions. No unencrypted private contacts or location coordinates are shared with RevenueCat.</li>
+    </ul>
 
-    <footer>&copy; 2026 DriveAssist by Salina Labs. All rights reserved.</footer>
+    <h2>6. Children's Privacy</h2>
+    <p>DriveAssist is an automotive application designed strictly for licensed motor vehicle operators. We do not knowingly collect personal information from individuals under the age of 16.</p>
+
+    <h2>7. Policy Updates</h2>
+    <p>We may update this Privacy Policy to reflect changes in legal requirements or application updates. Any updates will be published on this page with an updated effective date.</p>
+
+    <h2>8. Contact Us</h2>
+    <p>If you have questions or concerns regarding this Privacy Policy or your data protection rights, please contact Salina Labs:</p>
+    <p><strong>Salina Labs</strong><br>
+    Email: <a href="mailto:support@salinalabs.dev" style="color: var(--accent-blue);">support@salinalabs.dev</a><br>
+    Tunapuna-Piarco, Trinidad &amp; Tobago<br>
+    Website: <a href="https://salinalabs.dev" style="color: var(--accent-blue);">https://salinalabs.dev</a></p>
+
+    <div class="footer">
+        <p>&copy; 2026 Salina Labs. All rights reserved.</p>
+        <p>
+            <a href="https://salinalabs.dev">Home</a> |
+            <a href="https://salinalabs.dev/privacy.html">Privacy Policy</a> |
+            <a href="https://salinalabs.dev/terms.html">Terms of Service</a>
+        </p>
+    </div>
 </div>
 </body>
 </html>

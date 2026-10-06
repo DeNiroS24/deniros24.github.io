@@ -3,97 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DriveAssist - Terms of Service</title>
+    <title>DriveAssist - Terms of Service | Salina Labs</title>
     <style>
         :root {
-            --primary: #0056b3;
+            --bg-color: #0b0f19;
+            --card-bg: #131b2e;
+            --accent-blue: #3b82f6;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border-color: #1e293b;
+            --warning-bg: rgba(245, 158, 11, 0.12);
             --warning-border: #f59e0b;
-            --warning-bg: #fffbeb;
-            --text-dark: #1c1c1e;
-            --text-muted: #555558;
-            --border: #e5e5ea;
-            --bg-page: #f8f9fa;
-            --bg-card: #ffffff;
         }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; max-width: 880px; margin: 0 auto; padding: 40px 20px; color: var(--text-dark); line-height: 1.7; background-color: var(--bg-page); }
-        .container { background: var(--bg-card); padding: 44px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); border: 1px solid var(--border); }
-        h1 { font-size: 30px; color: #111; margin-bottom: 6px; font-weight: 800; }
-        .meta-header { font-size: 14px; color: var(--text-muted); margin-bottom: 24px; font-style: italic; }
-        h2 { font-size: 20px; color: var(--primary); margin-top: 32px; margin-bottom: 12px; font-weight: 700; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
-        p, li { font-size: 15px; color: #2c2c2e; }
-        ul { padding-left: 22px; margin-bottom: 16px; }
-        li { margin-bottom: 8px; }
-        .warning-box { background-color: var(--warning-bg); border-left: 5px solid var(--warning-border); padding: 18px 22px; margin: 24px 0; border-radius: 0 10px 10px 0; color: #92400e; font-size: 14.5px; }
-        .warning-box strong { font-weight: 800; color: #78350f; }
-        footer { margin-top: 40px; font-size: 13px; color: var(--text-muted); text-align: center; border-top: 1px solid var(--border); padding-top: 20px; }
-        a { color: var(--primary); text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 48px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+        .header {
+            margin-bottom: 32px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 24px;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+        .subhead {
+            color: var(--accent-blue);
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+        .last-updated {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+        .warning-box {
+            background: var(--warning-bg);
+            border-left: 4px solid var(--warning-border);
+            padding: 18px 22px;
+            border-radius: 0 12px 12px 0;
+            margin: 24px 0;
+            font-size: 15px;
+            color: #fde68a;
+        }
+        h2 {
+            font-size: 20px;
+            color: #ffffff;
+            margin-top: 36px;
+            margin-bottom: 14px;
+            font-weight: 700;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+        p {
+            font-size: 15px;
+            color: #cbd5e1;
+            margin-bottom: 14px;
+        }
+        ul {
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+        li {
+            font-size: 15px;
+            color: #cbd5e1;
+            margin-bottom: 8px;
+        }
+        li strong {
+            color: #ffffff;
+        }
+        .footer {
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-color);
+            font-size: 14px;
+            color: var(--text-muted);
+            text-align: center;
+        }
+        .footer a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 <div class="container">
-    <h1>Terms of Service for DriveAssist</h1>
-    <div class="meta-header">Effective Date: October 4, 2026 | Last Updated: October 2026</div>
-
-    <p>Welcome to <strong>DriveAssist</strong>. By downloading, accessing, or using the DriveAssist mobile application ("App"), provided by <strong>Salina Labs</strong> ("we", "us", or "our"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not install or use the App.</p>
-
-    <div class="warning-box">
-        <strong>DRIVER SAFETY NOTICE AND COMPLETE LIABILITY RELEASE:</strong><br>
-        DriveAssist is an auxiliary cockpit utility designed to facilitate hands-free organization and convenience. Operating a motor vehicle requires your full attention. As the driver, you bear 100% legal, civil, and physical responsibility for the safe operation of your vehicle, obeying all traffic regulations, observing road conditions, and adhering to applicable distracted driving laws.
+    <div class="header">
+        <div class="subhead">Salina Labs</div>
+        <h1>Terms of Service for DriveAssist</h1>
+        <div class="last-updated">Effective Date: October 2026</div>
     </div>
 
-    <h2>1. Driver Responsibility and Safety Waiver</h2>
-    <p>As a condition of using DriveAssist, you explicitly agree and covenant that:</p>
+    <p>Welcome to DriveAssist. By downloading, accessing, or using the DriveAssist mobile application, you agree to be bound by these Terms of Service. If you do not agree with these terms, do not install or use the application.</p>
+
+    <div class="warning-box">
+        <strong>Mandatory Driver Safety Disclaimer:</strong> DriveAssist is strictly an auxiliary driving utility. As a motor vehicle operator, you remain solely and exclusively responsible for the safe operation of your vehicle, adherence to all traffic laws, and maintaining full visual attention on the road at all times. Never manipulate your device or screen while driving in a manner that compromises vehicular safety.
+    </div>
+
+    <h2>1. Driver Responsibility and Road Safety</h2>
+    <p>DriveAssist is engineered to minimize manual device interactions through hands-free utilities, voice shortcuts, and cockpit organization. By using the application, you explicitly acknowledge and agree to the following:</p>
     <ul>
-        <li><strong>Eyes on the Road:</strong> You will keep your attention focused on driving and will never interact with touch controls, configure layouts, or read screens while your vehicle is in motion if doing so compromises your safety or violates local laws.</li>
-        <li><strong>Mounting and Legal Compliance:</strong> You are solely responsible for ensuring your mobile device is safely mounted in compliance with state, provincial, and national windshield obstruction and hands-free driving statutes.</li>
-        <li><strong>Emergency Override:</strong> In-app navigation estimates, map renderings, and automated parking detections are informational aids and must never supersede road signs, traffic signals, law enforcement directions, or your personal driving judgment.</li>
-        <li><strong>Complete Release:</strong> You release Salina Labs, its developers, affiliates, and partners from any and all liability, claims, demands, costs, injuries, collisions, traffic citations, or damages resulting from driver distraction, device usage, or reliance on the App during motor vehicle operation.</li>
+        <li>You will maintain full physical control of your vehicle at all times and follow all applicable road traffic regulations, speed limits, and mobile phone usage laws in your jurisdiction.</li>
+        <li>You will set up your destinations, contacts, and custom shortcuts before placing your vehicle in motion.</li>
+        <li>Salina Labs and its developers assume zero liability for any moving violations, traffic fines, collisions, personal injuries, deaths, or property damage resulting from vehicle operation while using the application.</li>
     </ul>
 
-    <h2>2. Subscription Terms, Tiers and Billing</h2>
-    <p>DriveAssist offers standard free features alongside auto-renewing premium subscription tiers ("Pro Dashboard" and "Pro Navigation"):</p>
+    <h2>2. User Accounts and Master Key Security</h2>
+    <p>Certain cloud backup capabilities require account creation. When using an account:</p>
     <ul>
-        <li><strong>Subscription Tiers:</strong>
-            <ul>
-                <li><strong>Free Tier:</strong> Access to core hands-free voice utilities, basic contacts hub, and local device storage.</li>
-                <li><strong>Pro Dashboard:</strong> Unlocks custom Bento dashboard layouts, encrypted multi-device cloud sync, and extended cockpit customizations ($4.99/mo).</li>
-                <li><strong>Pro Navigation:</strong> Unlocks advanced navigation overlays, multi-stop routing shortcuts, and enterprise cockpit integrations ($12.99/mo).</li>
-            </ul>
-        </li>
-        <li><strong>Billing and In-App Purchases:</strong> All subscription purchases, renewals, and payments are processed exclusively through Google Play In-App Billing via RevenueCat. We do not store or access your credit card details.</li>
-        <li><strong>Free Trials:</strong> If a free trial is offered, you must cancel at least 24 hours before the trial ends to avoid being billed for the subsequent subscription period.</li>
-        <li><strong>Auto-Renewal and Cancellation:</strong> Subscriptions automatically renew at the current rate unless cancelled at least 24 hours before the end of the billing cycle. You may manage or cancel your subscription at any time through Google Play Store / Profile / Payments and Subscriptions.</li>
-        <li><strong>Refunds:</strong> All refund requests are governed by Google Play Store Refund Policies.</li>
+        <li>You agree to provide accurate information and safeguard your credentials.</li>
+        <li><strong>Zero-Knowledge Master Password:</strong> Your encrypted cloud backups are protected using a hardware-derived master key based on your secret passkey or phrase. Because Salina Labs does not possess or store this key, we cannot recover your encrypted vault data if you lose your master credentials.</li>
+        <li>You are solely responsible for maintaining the confidentiality and backups of your master access keys.</li>
     </ul>
 
-    <h2>3. License and Intellectual Property</h2>
-    <p>Salina Labs grants you a personal, non-exclusive, non-transferable, revocable license to use DriveAssist for non-commercial purposes on compatible Android devices. You agree not to reverse engineer, decompile, disassemble, extract source code, modify, or create derivative works of the App.</p>
+    <h2>3. Subscriptions, Payments, and Billing</h2>
+    <p>DriveAssist provides free core utilities and optional premium subscription tiers (DriveAssist Pro):</p>
+    <ul>
+        <li><strong>In-App Purchases:</strong> Subscriptions and in-app upgrades are processed securely via Google Play In-App Billing and verified through RevenueCat.</li>
+        <li><strong>Automatic Renewal:</strong> Recurring subscriptions renew automatically unless canceled at least 24 hours prior to the conclusion of the active billing cycle.</li>
+        <li><strong>Management and Refunds:</strong> You can manage, modify, or cancel your subscription at any time within your Google Play Store account settings. Refunds are handled in accordance with Google Play Store refund policies.</li>
+    </ul>
 
-    <h2>4. Third-Party Integrations and External Navigation</h2>
-    <p>DriveAssist integrates with third-party software, including Google Maps, Waze, and media streaming applications. Salina Labs makes no guarantees regarding the continuous availability, accuracy, or performance of external third-party software, routing data, or API services.</p>
+    <h2>4. License and Intellectual Property</h2>
+    <p>Salina Labs grants you a personal, non-exclusive, non-transferable, revocable license to use DriveAssist for personal, non-commercial purposes on compatible Android devices.</p>
+    <ul>
+        <li>All code, interface designs, graphics, branding, trademarks, and documentation are the exclusive property of Salina Labs.</li>
+        <li>You may not decompile, reverse-engineer, modify, or extract the source code of DriveAssist, except where permitted by applicable open-source license agreements.</li>
+    </ul>
 
-    <h2>5. Disclaimer of Warranties</h2>
-    <p>THE APP IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, GPS ACCURACY, OR CONTINUOUS AVAILABILITY. USE OF THE APP IS AT YOUR SOLE RISK.</p>
+    <h2>5. Termination and Account Deletion</h2>
+    <p>You may terminate your agreement with Salina Labs at any time:</p>
+    <ul>
+        <li>You can uninstall the application and discontinue usage.</li>
+        <li>You can permanently purge your cloud backups and delete your user account directly within the application under Settings &gt; Danger Zone &gt; Permanently Delete Account.</li>
+        <li>Salina Labs reserves the right to suspend or terminate accounts that violate these terms or compromise network security.</li>
+    </ul>
 
-    <h2>6. Limitation of Liability</h2>
-    <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW, SALINA LABS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, NOR FOR ANY LOSS OF LIFE, PHYSICAL INJURY, PROPERTY DAMAGE, VEHICULAR DAMAGE, OR TRAFFIC FINES ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF DRIVEASSIST.</p>
+    <h2>6. Disclaimer of Warranties</h2>
+    <p>DriveAssist is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, whether express, implied, or statutory. Salina Labs makes no warranty that:</p>
+    <ul>
+        <li>The application will be uninterrupted, error-free, or compatible with every vehicular infotainment system.</li>
+        <li>GPS speed estimates, road telemetry, or third-party navigation shortcuts are free from lag, signal interruption, or inaccuracies.</li>
+    </ul>
 
-    <h2>7. Account Termination and Cloud Purge</h2>
-    <p>You may terminate your account and purge all encrypted cloud backups at any time directly inside the App under System Info / Danger Zone / Purge Cloud Data / Delete Account, or by emailing <a href="mailto:support@salinalabs.dev">support@salinalabs.dev</a>. We reserve the right to suspend or terminate access to our cloud services for accounts that violate these Terms.</p>
+    <h2>7. Limitation of Liability</h2>
+    <p>To the maximum extent permitted by applicable law, Salina Labs, its affiliates, directors, employees, and agents shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages, including loss of profits, vehicular damage, personal injury, or data loss, arising from or connected to your access to or use of the application.</p>
 
-    <h2>8. Governing Law and Dispute Resolution</h2>
-    <p>These Terms shall be governed by and construed in accordance with the laws of the developer's jurisdiction, without regard to its conflict of law principles. Any legal claim or dispute arising under these Terms shall be resolved through binding individual arbitration or small claims court, rather than class actions.</p>
+    <h2>8. Governing Law</h2>
+    <p>These Terms shall be governed and interpreted in accordance with the laws of Trinidad &amp; Tobago, without regard to its conflict of law provisions.</p>
 
     <h2>9. Contact Information</h2>
-    <p>If you have any questions or concerns regarding these Terms, contact us at:</p>
-    <p>
-        <strong>Email:</strong> <a href="mailto:support@salinalabs.dev">support@salinalabs.dev</a><br>
-        <strong>Company:</strong> Salina Labs / DeNiroS24<br>
-        <strong>Website:</strong> <a href="https://salinalabs.dev" target="_blank" rel="noopener">https://salinalabs.dev</a>
-    </p>
+    <p>For questions or legal inquiries regarding these Terms of Service, please contact:</p>
+    <p><strong>Salina Labs</strong><br>
+    Email: <a href="mailto:support@salinalabs.dev" style="color: var(--accent-blue);">support@salinalabs.dev</a><br>
+    Tunapuna-Piarco, Trinidad &amp; Tobago<br>
+    Website: <a href="https://salinalabs.dev" style="color: var(--accent-blue);">https://salinalabs.dev</a></p>
 
-    <footer>&copy; 2026 DriveAssist by Salina Labs. All rights reserved.</footer>
+    <div class="footer">
+        <p>&copy; 2026 Salina Labs. All rights reserved.</p>
+        <p>
+            <a href="https://salinalabs.dev">Home</a> |
+            <a href="https://salinalabs.dev/privacy.html">Privacy Policy</a> |
+            <a href="https://salinalabs.dev/terms.html">Terms of Service</a>
+        </p>
+    </div>
 </div>
 </body>
 </html>
