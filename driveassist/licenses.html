@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveAssist Open Source Licenses | Salina Labs</title>
+    <meta name="description" content="Open source software disclosures, third-party library notices, and licenses for DriveAssist by Salina Labs.">
+    <style>
+        :root {
+            --bg-color: #070913;
+            --surface-color: #0f172a;
+            --surface-border: #1e293b;
+            --accent-primary: #3b82f6;
+            --accent-cyan: #06b6d4;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-body: #cbd5e1;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding: 0;
+        }
+        header.site-header {
+            border-bottom: 1px solid var(--surface-border);
+            background: rgba(7, 9, 19, 0.85);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 18px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .brand-logo {
+            font-size: 19px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .brand-dot {
+            width: 9px;
+            height: 9px;
+            background: var(--accent-primary);
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 10px var(--accent-primary);
+        }
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: #ffffff;
+        }
+        .main-wrapper {
+            max-width: 880px;
+            margin: 48px auto 80px;
+            padding: 0 24px;
+        }
+        .doc-card {
+            background: var(--surface-color);
+            border: 1px solid var(--surface-border);
+            border-radius: 20px;
+            padding: 48px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        .doc-header {
+            border-bottom: 1px solid var(--surface-border);
+            padding-bottom: 28px;
+            margin-bottom: 36px;
+        }
+        .doc-badge {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.12);
+            color: var(--accent-primary);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            padding: 5px 12px;
+            border-radius: 9999px;
+            border: 1px solid rgba(59, 130, 246, 0.25);
+            margin-bottom: 14px;
+        }
+        h1 {
+            font-size: 34px;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.8px;
+            margin-bottom: 10px;
+        }
+        .meta-line {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        h2 {
+            font-size: 20px;
+            color: #ffffff;
+            font-weight: 700;
+            margin-top: 36px;
+            margin-bottom: 16px;
+            letter-spacing: -0.3px;
+        }
+        p {
+            font-size: 15px;
+            color: var(--text-body);
+            margin-bottom: 16px;
+        }
+        .license-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--surface-border);
+            border-radius: 14px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+        .license-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .lib-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        .lib-badge {
+            font-size: 12px;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            background: rgba(59, 130, 246, 0.15);
+            color: var(--accent-primary);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+        .lib-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+        .lib-link {
+            font-size: 13px;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            word-break: break-all;
+        }
+        .lib-link:hover {
+            text-decoration: underline;
+        }
+        pre.license-text {
+            background: #070913;
+            border: 1px solid var(--surface-border);
+            border-radius: 10px;
+            padding: 16px;
+            font-size: 13px;
+            color: #94a3b8;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            white-space: pre-wrap;
+            margin-top: 16px;
+            max-height: 240px;
+            overflow-y: auto;
+        }
+        footer.site-footer {
+            border-top: 1px solid var(--surface-border);
+            padding: 40px 24px;
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        .footer-links {
+            margin-bottom: 16px;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+        @media (max-width: 640px) {
+            .doc-card { padding: 28px 20px; }
+            h1 { font-size: 26px; }
+            .nav-container { padding: 16px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="nav-container">
+        <a href="../index.html" class="brand-logo">
+            <span class="brand-dot"></span>
+            Salina Labs
+        </a>
+        <nav class="nav-links">
+            <a href="../index.html">Studio Home</a>
+            <a href="../index.html#flagship">DriveAssist</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="licenses.html" class="active">Licenses</a>
+            <a href="mailto:support@salinalabs.dev">Support</a>
+        </nav>
+    </div>
+</header>
+
+<main class="main-wrapper">
+    <div class="doc-card">
+        <div class="doc-header">
+            <div class="doc-badge">Third-Party Notices</div>
+            <h1>Open Source Software Disclosures</h1>
+            <div class="meta-line">DriveAssist Production Build | October 2026</div>
+        </div>
+
+        <p>DriveAssist is built with and acknowledges the open source software libraries listed below. We express our gratitude to the open source community for their contributions to performance, security, and developer ergonomics.</p>
+
+        <h2>Third-Party Dependencies</h2>
+
+        <div class="license-card">
+            <div class="license-header">
+                <div class="lib-name">Android Jetpack, Jetpack Compose &amp; Material 3</div>
+                <div class="lib-badge">Apache License 2.0</div>
+            </div>
+            <div class="lib-desc">Declarative UI framework, foundational navigation components, and Material Design 3 system.</div>
+            <a href="https://developer.android.com/jetpack" target="_blank" rel="noopener" class="lib-link">https://developer.android.com/jetpack</a>
+        </div>
+
+        <div class="license-card">
+            <div class="license-header">
+                <div class="lib-name">Kotlin Coroutines &amp; Kotlinx Serialization</div>
+                <div class="lib-badge">Apache License 2.0</div>
+            </div>
+            <div class="lib-desc">Asynchronous reactive programming, StateFlow state holders, and JSON data serialization.</div>
+            <a href="https://github.com/Kotlin/kotlinx.coroutines" target="_blank" rel="noopener" class="lib-link">https://github.com/Kotlin/kotlinx.coroutines</a>
+        </div>
+
+        <div class="license-card">
+            <div class="license-header">
+                <div class="lib-name">Dagger Hilt</div>
+                <div class="lib-badge">Apache License 2.0</div>
+            </div>
+            <div class="lib-desc">Compile-time dependency injection framework for Android architecture components.</div>
+            <a href="https://github.com/google/dagger" target="_blank" rel="noopener" class="lib-link">https://github.com/google/dagger</a>
+        </div>
+
+        <div class="license-card">
+            <div class="license-header">
+                <div class="lib-name">Haze Hardware Blur Engine</div>
+                <div class="lib-badge">Apache License 2.0</div>
+            </div>
+            <div class="lib-desc">High-performance GPU-accelerated frosted glass backdrop and modal blur rendering engine.</div>
+            <a href="https://github.com/chrisbanes/haze" target="_blank" rel="noopener" class="lib-link">https://github.com/chrisbanes/haze</a>
+        </div>
+
+        <div class="license-card">
+            <div class="license-header">
+                <div class="lib-name">AndroidX Security Crypto &amp; Biometrics</div>
+                <div class="lib-badge">Apache License 2.0</div>
+            </div>
+            <div class="lib-desc">Hardware-backed Android Keystore integration, AES-256-GCM cipher wrappers, and biometric prompt shields.</div>
+            <a href="https://developer.android.com/jetpack/androidx/releases/security" target="_blank" rel="noopener" class="lib-link">https://developer.android.com/jetpack/androidx/releases/security</a>
+        </div>
+
+        <div class="license-card">
+            <div class="license-header">
+                <div class="lib-name">SQLCipher for Android</div>
+                <div class="lib-badge">BSD 3-Clause</div>
+            </div>
+            <div class="lib-desc">Full 256-bit AES database-level encryption extension for SQLite storage.</div>
+            <a href="https://www.zetetic.net/sqlcipher" target="_blank" rel="noopener" class="lib-link">https://www.zetetic.net/sqlcipher</a>
+        </div>
+
+        <div class="license-card">
+            <div class="license-header">
+                <div class="lib-name">Room Persistence Library &amp; DataStore</div>
+                <div class="lib-badge">Apache License 2.0</div>
+            </div>
+            <div class="lib-desc">Robust relational SQLite abstraction and typed protocol buffer preferences storage.</div>
+            <a href="https://developer.android.com/training/data-storage/room" target="_blank" rel="noopener" class="lib-link">https://developer.android.com/training/data-storage/room</a>
+        </div>
+
+        <div class="license-card">
+            <div class="license-header">
+                <div class="lib-name">Google Play Services Location &amp; Maps Compose</div>
+                <div class="lib-badge">Google Play Terms &amp; Apache 2.0</div>
+            </div>
+            <div class="lib-desc">Fused location provider, geofencing, and declarative Google Maps vector camera controls.</div>
+            <a href="https://github.com/googlemaps/android-maps-compose" target="_blank" rel="noopener" class="lib-link">https://github.com/googlemaps/android-maps-compose</a>
+        </div>
+
+        <div class="license-card">
+            <div class="license-header">
+                <div class="lib-name">RevenueCat Purchases SDK</div>
+                <div class="lib-badge">MIT License</div>
+            </div>
+            <div class="lib-desc">In-app purchase receipt validation, subscription lifecycle, and entitlement management.</div>
+            <a href="https://github.com/RevenueCat/purchases-android" target="_blank" rel="noopener" class="lib-link">https://github.com/RevenueCat/purchases-android</a>
+        </div>
+
+        <div class="license-card">
+            <div class="license-header">
+                <div class="lib-name">Google Firebase Android SDK</div>
+                <div class="lib-badge">Apache License 2.0</div>
+            </div>
+            <div class="lib-desc">Encrypted cloud document storage, authentication services, and crash diagnostics.</div>
+            <a href="https://firebase.google.com" target="_blank" rel="noopener" class="lib-link">https://firebase.google.com</a>
+        </div>
+
+        <div class="license-card">
+            <div class="license-header">
+                <div class="lib-name">Coil Image Loading</div>
+                <div class="lib-badge">Apache License 2.0</div>
+            </div>
+            <div class="lib-desc">Fast, lightweight, memory-efficient image loading for Android and Jetpack Compose.</div>
+            <a href="https://github.com/coil-kt/coil" target="_blank" rel="noopener" class="lib-link">https://github.com/coil-kt/coil</a>
+        </div>
+
+        <div class="license-card">
+            <div class="license-header">
+                <div class="lib-name">Reorderable</div>
+                <div class="lib-badge">Apache License 2.0</div>
+            </div>
+            <div class="lib-desc">Smooth drag-and-drop grid and list reordering for Jetpack Compose lazy layouts.</div>
+            <a href="https://github.com/Calvin-LL/Reorderable" target="_blank" rel="noopener" class="lib-link">https://github.com/Calvin-LL/Reorderable</a>
+        </div>
+
+        <div class="license-card">
+            <div class="license-header">
+                <div class="lib-name">AndroidX Window Manager &amp; Adaptive Navigation Suite</div>
+                <div class="lib-badge">Apache License 2.0</div>
+            </div>
+            <div class="lib-desc">Foldable posture detection, two-pane layout calculations, and adaptive navigation rail components.</div>
+            <a href="https://developer.android.com/jetpack/androidx/releases/window" target="_blank" rel="noopener" class="lib-link">https://developer.android.com/jetpack/androidx/releases/window</a>
+        </div>
+
+        <h2>Standard License Texts</h2>
+
+        <h3>Apache License 2.0</h3>
+        <pre class="license-text">Copyright (c) The Android Open Source Project
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</pre>
+
+        <h3>MIT License</h3>
+        <pre class="license-text">Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</pre>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="footer-links">
+        <a href="../index.html">Studio Home</a>
+        <a href="../index.html#flagship">DriveAssist</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="licenses.html">Open Source Licenses</a>
+        <a href="mailto:support@salinalabs.dev">Support Contact</a>
+    </div>
+    <p>&copy; 2026 Salina Labs. All rights reserved. Tunapuna-Piarco, Trinidad &amp; Tobago.</p>
+</footer>
+
+</body>
+</html>
