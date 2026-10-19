@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | Salina Labs</title>
+    <meta name="description" content="The requested resource was not found on Salina Labs.">
+    <style>
+        :root {
+            --bg-color: #070913;
+            --surface-color: #0f172a;
+            --surface-hover: #1e293b;
+            --surface-border: #1e293b;
+            --accent-primary: #3b82f6;
+            --accent-cyan: #06b6d4;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-body: #cbd5e1;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        header.site-header {
+            border-bottom: 1px solid var(--surface-border);
+            background: rgba(7, 9, 19, 0.85);
+            backdrop-filter: blur(14px);
+        }
+        .nav-container {
+            max-width: 1160px;
+            margin: 0 auto;
+            padding: 20px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .brand-logo {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: #ffffff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .brand-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--accent-primary);
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 12px var(--accent-primary);
+        }
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+        .error-content {
+            max-width: 700px;
+            margin: 80px auto;
+            padding: 0 24px;
+            text-align: center;
+        }
+        .error-code {
+            font-size: 80px;
+            font-weight: 900;
+            letter-spacing: -2px;
+            background: linear-gradient(135deg, #60a5fa 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 16px;
+        }
+        .error-title {
+            font-size: 28px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 16px;
+        }
+        .error-desc {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 36px;
+            line-height: 1.6;
+        }
+        .error-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            background: var(--accent-primary);
+            color: #ffffff;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+        .btn-primary:hover {
+            background: #2563eb;
+        }
+        .btn-secondary {
+            background: rgba(15, 23, 42, 0.8);
+            color: #ffffff;
+            font-weight: 600;
+            padding: 12px 22px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 14px;
+            border: 1px solid var(--surface-border);
+            transition: all 0.2s ease;
+        }
+        .btn-secondary:hover {
+            background: var(--surface-hover);
+        }
+        footer.site-footer {
+            border-top: 1px solid var(--surface-border);
+            padding: 40px 24px;
+            text-align: center;
+            background: #04060c;
+        }
+        .copyright-line {
+            font-size: 13px;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="nav-container">
+        <a href="/index.html" class="brand-logo">
+            <span class="brand-dot"></span>
+            Salina Labs
+        </a>
+        <nav class="nav-links">
+            <a href="/index.html">Studio Home</a>
+            <a href="/index.html#flagship">DriveAssist</a>
+            <a href="/driveassist/privacy.html">Privacy</a>
+            <a href="/driveassist/terms.html">Terms</a>
+            <a href="/driveassist/licenses.html">Licenses</a>
+        </nav>
+    </div>
+</header>
+
+<main class="error-content">
+    <div class="error-code">404</div>
+    <h1 class="error-title">Requested Resource Not Found</h1>
+    <p class="error-desc">
+        The page or file you requested does not exist or has moved. Explore our core platforms and legal documentation via the direct links below.
+    </p>
+    <div class="error-links">
+        <a href="/index.html" class="btn-primary">Return to Studio Home</a>
+        <a href="/index.html#flagship" class="btn-secondary">DriveAssist Cockpit</a>
+        <a href="/driveassist/privacy.html" class="btn-secondary">Privacy Policy</a>
+        <a href="/driveassist/terms.html" class="btn-secondary">Terms of Service</a>
+        <a href="/driveassist/licenses.html" class="btn-secondary">Open Source Licenses</a>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="copyright-line">
+        &copy; 2026 Salina Labs. All rights reserved. Tunapuna-Piarco, Trinidad &amp; Tobago.
+    </div>
+</footer>
+
+</body>
+</html>
