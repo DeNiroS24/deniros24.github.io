@@ -251,7 +251,7 @@
 <header class="site-header">
     <div class="nav-container">
         <a href="../index.html" class="brand-logo">
-            <span class="brand-dot"></span>
+            <img src="../assets/images/driveassist_icon_512.png" alt="DriveAssist Icon" style="width: 28px; height: 28px; border-radius: 6px;">
             Salina Labs
         </a>
         <nav class="nav-links">
@@ -296,7 +296,7 @@
                     <tr>
                         <td><strong>ACCESS_FINE_LOCATION &amp; ACCESS_COARSE_LOCATION</strong></td>
                         <td>Calculates real-time vehicle speed, compass bearing, odometer distance, weather telemetry, and automated parking spot coordinates.</td>
-                        <td>Processed strictly in local volatile RAM and stored in local database tables. Location data is never transmitted to Salina Labs servers or external location aggregators.</td>
+                        <td><strong>Real-Time Driving Telemetry:</strong> Vehicle speed, live GPS heading, odometer distance, and active driving routes are processed strictly in local volatile RAM and stored in local device database tables. Real-time driving tracking is never transmitted to remote servers.<br><br><strong>Saved Destinations &amp; Parking Pin (Location Hub):</strong> User-saved places (e.g., Home, Work) and saved vehicle parking coordinates remain on-device by default. If you subscribe to DriveAssist Pro and optionally enable Cloud Sync, saved destination coordinates and your last parked pin are encrypted client-side using hardware-backed AES-256-GCM before transmission to your private, encrypted Firebase Firestore backup. Salina Labs has zero access to decrypt your coordinates.</td>
                     </tr>
                     <tr>
                         <td><strong>RECORD_AUDIO &amp; FOREGROUND_SERVICE_MICROPHONE</strong></td>
@@ -311,7 +311,7 @@
                     <tr>
                         <td><strong>POST_NOTIFICATIONS (Android 13+)</strong></td>
                         <td>Delivers high-priority driving safety alerts, Emergency SOS status updates, and foreground trip recording controls.</td>
-                        <td>Local system notifications only. No telemetry or messaging payloads are transmitted externally.</td>
+                        <td>Local system notifications only. No continuous telemetry or driving trip logs are transmitted externally.</td>
                     </tr>
                     <tr>
                         <td><strong>CALL_PHONE &amp; SEND_SMS</strong></td>
@@ -352,12 +352,13 @@
             <li><strong>Zero-Knowledge Principle:</strong> Salina Labs servers and customer support staff do not receive, store, or log your master key or recovery seed phrase. If you lose your master credentials, Salina Labs cannot decrypt or restore your data.</li>
         </ul>
 
-        <h2>5. Optional Cloud Synchronization</h2>
-        <p>Drivers may optionally enable cloud backup to synchronize preferences across personal devices:</p>
+        <h2>5. Optional Cloud Synchronization (DriveAssist Pro Exclusive)</h2>
+        <p>Active DriveAssist Pro subscribers may optionally enable cloud backup to synchronize preferences, pins, and custom shortcuts across personal devices. Free tier users operate in a 100% air-gapped, on-device local mode with zero cloud synchronization traffic:</p>
         <ul>
-            <li><strong>Client-Side Encryption Before Transit:</strong> All vault records, custom wake words, and settings are encrypted on your physical device using AES-256 before transmission over secure TLS 1.3 channels.</li>
-            <li><strong>Encrypted Payload Storage:</strong> Payloads stored in Google Firebase Firestore consist exclusively of encrypted ciphertexts. Salina Labs has no technical mechanism to read or analyze synchronized records.</li>
-            <li><strong>Delta Synchronization:</strong> Synchronization operations transfer minimal differential payloads to preserve mobile cellular bandwidth and battery life.</li>
+            <li><strong>Client-Side Encryption Before Transit:</strong> All vault records, custom wake words, Location Hub pinned destinations (including latitude and longitude coordinates), vehicle parking spot pins, UI visualizer configs, and whitelisted preferences are encrypted on your physical device using AES-256-GCM before transmission over secure TLS 1.3 channels.</li>
+            <li><strong>Encrypted Payload Storage:</strong> Payloads stored in Google Firebase Firestore consist exclusively of encrypted ciphertexts. Salina Labs has no technical mechanism or keys to inspect, read, or analyze your synchronized records or saved places.</li>
+            <li><strong>Optional Commute Habit Models:</strong> If you explicitly enable telemetry backup in settings, learned commute departure patterns are serialized and client-side encrypted. Live driving GPS routes, speed logs, and odometer breadcrumbs are strictly excluded from cloud backups.</li>
+            <li><strong>Delta Synchronization:</strong> Synchronization operations transfer minimal differential payloads based on modified timestamps to preserve mobile cellular bandwidth and battery life.</li>
         </ul>
 
         <h2>6. Third-Party Infrastructure Sub-Processors</h2>
@@ -374,8 +375,8 @@
                 <tbody>
                     <tr>
                         <td><strong>Google Firebase (Firestore &amp; Auth)</strong></td>
-                        <td>Account authentication and optional multi-device backup storage.</td>
-                        <td>User email/UID and client-side encrypted AES-256 ciphertexts.</td>
+                        <td>Account authentication and optional Pro multi-device encrypted backup storage.</td>
+                        <td>User email/UID and client-side encrypted AES-256 ciphertexts (vault contacts, shortcuts, saved places, and UI preferences).</td>
                     </tr>
                     <tr>
                         <td><strong>Google Play Services &amp; Google Maps SDK</strong></td>

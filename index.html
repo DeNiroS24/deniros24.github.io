@@ -366,12 +366,143 @@
             color: #64748b;
             font-size: 13px;
         }
+        .feature-banner-container {
+            width: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            margin: 20px 0 28px 0;
+            border: 1px solid var(--surface-border);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+            background: #000000;
+        }
+        .feature-banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .screenshot-showcase-header {
+            margin-top: 36px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .screenshot-showcase-header h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        .screenshot-showcase-header p {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        .screenshot-scroll-container {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 8px 4px 24px 4px;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+        .screenshot-scroll-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        .screenshot-scroll-container::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 4px;
+        }
+        .screenshot-scroll-container::-webkit-scrollbar-thumb {
+            background: var(--surface-border);
+            border-radius: 4px;
+        }
+        .screenshot-scroll-container::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-primary);
+        }
+        .screenshot-card {
+            flex: 0 0 260px;
+            scroll-snap-align: start;
+            background: var(--surface-color);
+            border: 1px solid var(--surface-border);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+        .screenshot-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(59, 130, 246, 0.5);
+            box-shadow: 0 16px 32px rgba(59, 130, 246, 0.2);
+        }
+        .screenshot-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .screenshot-caption {
+            padding: 14px 16px;
+            border-top: 1px solid var(--surface-border);
+            background: rgba(15, 23, 42, 0.85);
+        }
+        .screenshot-caption-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 4px;
+        }
+        .screenshot-caption-desc {
+            font-size: 12px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+        .play-store-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #000000;
+            color: #ffffff;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            padding: 12px 22px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        .play-store-btn:hover {
+            border-color: var(--accent-primary);
+            box-shadow: 0 6px 16px rgba(59, 130, 246, 0.3);
+            transform: translateY(-2px);
+        }
+        .testing-pill-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(59, 130, 246, 0.15);
+            color: #60a5fa;
+            border: 1px solid rgba(59, 130, 246, 0.4);
+            padding: 12px 22px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+        .testing-pill-btn:hover {
+            background: rgba(59, 130, 246, 0.25);
+            color: #ffffff;
+            border-color: var(--accent-primary);
+            transform: translateY(-2px);
+        }
         @media (max-width: 768px) {
             h1.hero-title { font-size: 36px; }
             p.hero-lead { font-size: 17px; }
             .flagship-card { padding: 32px 24px; }
             .nav-container { padding: 16px 20px; }
             .nav-links { gap: 16px; }
+            .screenshot-card { flex: 0 0 220px; }
         }
     </style>
 </head>
@@ -380,7 +511,7 @@
 <header class="site-header">
     <div class="nav-container">
         <a href="index.html" class="brand-logo">
-            <span class="brand-dot"></span>
+            <img src="assets/images/driveassist_icon_512.png" alt="DriveAssist Icon" style="width: 28px; height: 28px; border-radius: 6px;">
             Salina Labs
         </a>
         <nav class="nav-links">
@@ -396,17 +527,23 @@
 
 <section class="hero-section">
     <div class="studio-badge">
-        <span>Independent Engineering Studio</span>
+        <span>Independent Automotive Engineering Studio</span>
     </div>
     <h1 class="hero-title">
         Software Engineered for <span>Privacy</span> and <span>Performance</span>.
     </h1>
     <p class="hero-lead">
-        We architect specialized automotive systems, native mobile platforms, and zero-knowledge tools with mathematical integrity at the foundation.
+        We architect specialized automotive cockpit systems, native Android platforms, and zero-knowledge tools with mathematical integrity at the foundation.
     </p>
     <div class="hero-actions">
-        <a href="#flagship" class="btn-primary">Explore DriveAssist</a>
-        <a href="driveassist/privacy.html" class="btn-secondary">Privacy Architecture</a>
+        <a href="https://play.google.com/apps/testing/com.salina.driveai" target="_blank" rel="noopener" class="testing-pill-btn">
+            🧪 Join Closed Testing (Web Opt-In)
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.salina.driveai" target="_blank" rel="noopener" class="play-store-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.38 2.38 0 0 1-.22-.988V2.802c0-.36.08-.698.22-.988zm11.235 11.234l2.457 2.457-11.838 6.77 9.381-9.227zm0-2.096L5.463 1.725l11.838 6.77-2.457 2.457zm1.484 1.048l3.195 1.828c.854.488.854 1.288 0 1.776l-3.195 1.828-2.115-2.115 2.115-2.117z"/></svg>
+            Google Play Store &rarr;
+        </a>
+        <a href="#flagship" class="btn-secondary">Explore Cockpit</a>
     </div>
 </section>
 
@@ -418,15 +555,22 @@
 
     <div class="flagship-card">
         <div class="flagship-header">
-            <div class="flagship-title-area">
-                <h2>DriveAssist for Android</h2>
-                <div class="flagship-tagline">Integrated automotive co-pilot, zero-knowledge vault, and hands-free cockpit.</div>
+            <div class="flagship-title-area" style="display: flex; align-items: center; gap: 18px;">
+                <img src="assets/images/driveassist_icon_512.png" alt="DriveAssist App Icon" style="width: 62px; height: 62px; border-radius: 14px; box-shadow: 0 4px 18px rgba(59, 130, 246, 0.4); border: 1px solid rgba(59, 130, 246, 0.3);">
+                <div>
+                    <h2>DriveAssist for Android</h2>
+                    <div class="flagship-tagline">Integrated automotive co-pilot, zero-knowledge vault, and hands-free cockpit.</div>
+                </div>
             </div>
             <div class="platform-badge">Android 8.0+ | Production Ready</div>
         </div>
 
-        <p style="color: var(--text-body); font-size: 16px; margin-bottom: 24px;">
-            DriveAssist delivers an integrated in-vehicle experience designed to minimize driver distraction. Combining high-accuracy vehicle telemetry, an offline voice engine, and client-side encryption, DriveAssist redefines dashboard safety without cloud tracking.
+        <div class="feature-banner-container">
+            <img src="assets/images/feature_graphic.png" alt="DriveAssist In-Cockpit Dashboard System" class="feature-banner-img">
+        </div>
+
+        <p style="color: var(--text-body); font-size: 16px; margin-bottom: 24px; line-height: 1.8;">
+            DriveAssist delivers an integrated in-vehicle experience designed to minimize driver distraction. Combining high-accuracy vehicle telemetry, an offline acoustic voice engine, and client-side encryption, DriveAssist redefines dashboard safety without cloud tracking.
         </p>
 
         <div class="pillar-grid">
@@ -452,8 +596,71 @@
             </div>
         </div>
 
-        <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 12px;">
-            <a href="driveassist/privacy.html" class="card-footer-link">Read Privacy Policy &rarr;</a>
+        <!-- In-Cockpit Screenshot Showcase -->
+        <div class="screenshot-showcase-header">
+            <div>
+                <h3>In-Cockpit Interface &amp; Security Vault</h3>
+                <p>Engineered for high glanceability, dark cabin ergonomics, and zero-distraction driving.</p>
+            </div>
+            <div style="font-size: 13px; color: var(--accent-primary); font-weight: 600;">
+                Scroll to preview &rarr;
+            </div>
+        </div>
+
+        <div class="screenshot-scroll-container">
+            <div class="screenshot-card">
+                <img src="assets/images/phone_cockpit.png" alt="Customizable Bento Grid" loading="lazy">
+                <div class="screenshot-caption">
+                    <div class="screenshot-caption-title">Customizable Bento Grid</div>
+                    <div class="screenshot-caption-desc">Modular driving cards with real-time speed, weather, and course tracking.</div>
+                </div>
+            </div>
+            <div class="screenshot-card">
+                <img src="assets/images/phone_parking.png" alt="Automated Parking Radar" loading="lazy">
+                <div class="screenshot-caption">
+                    <div class="screenshot-caption-title">Automated Parking Radar</div>
+                    <div class="screenshot-caption-desc">Auto-records parking GPS on Bluetooth disconnect with 1-tap walking directions.</div>
+                </div>
+            </div>
+            <div class="screenshot-card">
+                <img src="assets/images/phone_voice.png" alt="Offline Voice Assistant" loading="lazy">
+                <div class="screenshot-caption">
+                    <div class="screenshot-caption-title">100% Offline Voice HUD</div>
+                    <div class="screenshot-caption-desc">On-device acoustic processing with real-time waveform visualizer and zero music ducking.</div>
+                </div>
+            </div>
+            <div class="screenshot-card">
+                <img src="assets/images/phone_calling.png" alt="Quick Call Hub" loading="lazy">
+                <div class="screenshot-caption">
+                    <div class="screenshot-caption-title">Quick Call Hub &amp; VIPs</div>
+                    <div class="screenshot-caption-desc">Tactile speed dialing, drag-and-drop contact reordering, and emergency dispatch.</div>
+                </div>
+            </div>
+            <div class="screenshot-card">
+                <img src="assets/images/phone_hud.png" alt="Automotive Telemetry HUD" loading="lazy">
+                <div class="screenshot-caption">
+                    <div class="screenshot-caption-title">Automotive Telemetry HUD</div>
+                    <div class="screenshot-caption-desc">High-contrast tire monitoring (TPMS), dual-slot odometry, and 3D terrain maps.</div>
+                </div>
+            </div>
+            <div class="screenshot-card">
+                <img src="assets/images/phone_vault.png" alt="Zero-Knowledge Security Vault" loading="lazy">
+                <div class="screenshot-caption">
+                    <div class="screenshot-caption-title">Zero-Knowledge Vault</div>
+                    <div class="screenshot-caption-desc">Hardware-backed AES-256-GCM encryption with 12-word BIP-39 recovery seed.</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 16px; flex-wrap: wrap; margin-top: 28px; align-items: center;">
+            <a href="https://play.google.com/apps/testing/com.salina.driveai" target="_blank" rel="noopener" class="testing-pill-btn">
+                🧪 Closed Testing Opt-In (Day 8)
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.salina.driveai" target="_blank" rel="noopener" class="play-store-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a2.38 2.38 0 0 1-.22-.988V2.802c0-.36.08-.698.22-.988zm11.235 11.234l2.457 2.457-11.838 6.77 9.381-9.227zm0-2.096L5.463 1.725l11.838 6.77-2.457 2.457zm1.484 1.048l3.195 1.828c.854.488.854 1.288 0 1.776l-3.195 1.828-2.115-2.115 2.115-2.117z"/></svg>
+                Google Play Store Listing
+            </a>
+            <a href="driveassist/privacy.html" class="card-footer-link">Privacy Policy &rarr;</a>
             <a href="driveassist/terms.html" class="card-footer-link">Terms of Service &rarr;</a>
             <a href="driveassist/licenses.html" class="card-footer-link">Open Source Notices &rarr;</a>
         </div>
